@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const FooterBtn = ({ text }: { text: string }) => {
   return (
