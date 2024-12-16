@@ -13,6 +13,7 @@ import { ThemeProvider } from "./context/context";
 import { useGSAP } from "@gsap/react";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
+import Loader from "./components/Loader";
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -81,9 +82,21 @@ function App() {
       },
     });
   });
+
+  useGSAP(() => {
+    gsap.to("#loader-path", {
+      width: "0%",
+      duration: 5,
+      ease: "power2.inOut",
+      onComplete: () => {
+        document.getElementById("loader-path")?.remove();
+      },
+    });
+  });
   return (
     <ThemeProvider>
       <main className="min-h-screen w-screen relative overflow-x-hidden bg-blue-75">
+        <Loader></Loader>
         <Navbar></Navbar>
         <Hero></Hero>
         <About></About>
