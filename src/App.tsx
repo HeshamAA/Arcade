@@ -86,7 +86,7 @@ function App() {
   useGSAP(() => {
     gsap.to("#loader-path", {
       width: "0%",
-      delay: 5,
+      delay: 10,
       duration: 4,
       ease: "power2.inOut",
       onComplete: () => {
