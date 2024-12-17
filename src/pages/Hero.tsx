@@ -16,7 +16,7 @@ const Hero = () => {
   const originalVideoRef = useRef<HTMLVideoElement | null>(null);
   const miniVideoPreviewRef = useRef<HTMLVideoElement | null>(null);
   gsap.registerPlugin(ScrollTrigger);
-  const { setLoadedData } = useContext(ThemeContext);
+  const { loadedData,setLoadedData } = useContext(ThemeContext);
   const miniVieoPreviewStart = () => {
     miniVideoPreviewRef.current?.play();
   };
@@ -94,7 +94,9 @@ const Hero = () => {
               ref={originalVideoRef}
               src={getVideoSrc(currentVideoIndex)}
               onLoadedData={() => {
+                console.log("Hero video loaded");
                 setLoadedData(true);
+                console.log(loadedData);
               }}
               loop
               muted
@@ -109,7 +111,10 @@ const Hero = () => {
               ref={nextVideoRef}
               src={getVideoSrc(currentVideoIndex)}
               onLoadedData={() => {
+                console.log("Hero video loaded");
                 setLoadedData(true);
+                console.log(loadedData);
+                
               }}
               loop
               muted

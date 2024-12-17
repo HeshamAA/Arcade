@@ -8,12 +8,12 @@ import Story from "./pages/Story";
 import WhoWeAre from "./pages/WhoWeAre";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { ThemeContext, ThemeProvider } from "./context/context";
+import { ThemeProvider } from "./context/context";
 import { useGSAP } from "@gsap/react";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Loader from "./components/Loader";
-import { useContext } from "react";
+
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -83,19 +83,7 @@ function App() {
     });
   });
 
-  useGSAP(() => {
-    gsap.to("#loader-path", {
-      width: "0%",
-      delay: loadedData ? 0 : 20,
-      duration: 4,
-      ease: "power2.inOut",
-      onComplete: () => {
-        document.getElementById("loader-path")?.remove();
-      },
-    });
-  });
-
-  const { loadedData } = useContext(ThemeContext);
+  
   return (
     <ThemeProvider>
       <main className="min-h-screen w-screen relative overflow-x-hidden bg-blue-75">
