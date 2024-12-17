@@ -1,11 +1,11 @@
-import { useContext, useRef, useState } from "react";
+import {  useRef, useState } from "react";
 import Button from "../components/Button";
 import { TiLocation } from "react-icons/ti";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Tilt from "react-parallax-tilt";
-import { ThemeContext } from "../context/context";
+
 
 const Hero = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(1);
@@ -16,7 +16,7 @@ const Hero = () => {
   const originalVideoRef = useRef<HTMLVideoElement | null>(null);
   const miniVideoPreviewRef = useRef<HTMLVideoElement | null>(null);
   gsap.registerPlugin(ScrollTrigger);
-  const { loadedData,setLoadedData } = useContext(ThemeContext);
+  
   const miniVieoPreviewStart = () => {
     miniVideoPreviewRef.current?.play();
   };
@@ -93,11 +93,7 @@ const Hero = () => {
             <video
               ref={originalVideoRef}
               src={getVideoSrc(currentVideoIndex)}
-              onLoadedData={() => {
-                console.log("Hero video loaded");
-                setLoadedData(true);
-                console.log(loadedData);
-              }}
+              poster="/img/screen.png"
               loop
               muted
               autoPlay
@@ -110,12 +106,7 @@ const Hero = () => {
             <video
               ref={nextVideoRef}
               src={getVideoSrc(currentVideoIndex)}
-              onLoadedData={() => {
-                console.log("Hero video loaded");
-                setLoadedData(true);
-                console.log(loadedData);
-                
-              }}
+              poster="/img/screen.png"
               loop
               muted
               autoPlay

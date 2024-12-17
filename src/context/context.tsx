@@ -4,8 +4,7 @@ interface ThemeContextType {
   className: string | undefined;
   setClassName: (className: string | undefined) => void;
   generalRef: MutableRefObject<null>;
-  loadedData: boolean;
-  setLoadedData: (loadedData: boolean) => void;
+
 }
 
 const ThemeContext = createContext({} as ThemeContextType);
@@ -16,12 +15,12 @@ interface ThemeProviderProps {
 
 const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [className, setClassName] = useState<string | undefined>("bg-black-white");
-  const [loadedData,setLoadedData]= useState(false);
+
   const generalRef = useRef(null);
   
   
   return (
-    <ThemeContext.Provider value={{ className, setClassName, generalRef,loadedData ,setLoadedData}}>
+    <ThemeContext.Provider value={{ className, setClassName, generalRef}}>
       {children}
     </ThemeContext.Provider>
   );
