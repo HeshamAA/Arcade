@@ -80,7 +80,7 @@ const Hero = () => {
   };
 
   const getVideoSrc = (index: number) => `/videos/hero-${index}.mp4`;
-
+  const getVideoPoster = (index: number) => `/img/screen${index}.png`;
   return (
     <section>
       <div className="h-dvh w-screen relative">
@@ -93,7 +93,7 @@ const Hero = () => {
             <video
               ref={originalVideoRef}
               src={getVideoSrc(currentVideoIndex)}
-              poster="/img/screen.png"
+              poster={getVideoPoster(currentVideoIndex)}
               loop
               muted
               autoPlay
@@ -106,7 +106,7 @@ const Hero = () => {
             <video
               ref={nextVideoRef}
               src={getVideoSrc(currentVideoIndex)}
-              poster="/img/screen.png"
+              poster={getVideoPoster(currentVideoIndex)}
               loop
               muted
               autoPlay
