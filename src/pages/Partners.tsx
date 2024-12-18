@@ -12,6 +12,7 @@ const Partners = () => {
     ScrollTrigger.matchMedia({
       // Media query for min-height: 768px
       "(min-height: 768px)": function () {
+        
         gsap.timeline({
           scrollTrigger: {
             trigger: "#partners-control",

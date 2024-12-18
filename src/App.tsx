@@ -3,7 +3,7 @@ import Features from "./pages/Features";
 import Hero from "./pages/Hero";
 import Navbar from "./pages/Navbar";
 import Partners from "./pages/Partners";
-import Pin from "./pages/Pin";
+// import Pin from "./pages/Pin";
 import Story from "./pages/Story";
 import WhoWeAre from "./pages/WhoWeAre";
 import gsap from "gsap";
@@ -102,7 +102,7 @@ function App() {
         <About></About>
         <Features></Features>
         <Story></Story>
-        <Pin></Pin>
+        {/* <Pin></Pin> */}
         <WhoWeAre></WhoWeAre>
         <Partners></Partners>
         <Contact></Contact>
