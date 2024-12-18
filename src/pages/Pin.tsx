@@ -4,11 +4,8 @@ import gsap from "gsap";
 import PinItem from "../components/PinItem";
 import { useRef } from "react";
 
-
 const Pin = () => {
   const pinRef = useRef(null);
-
- 
 
   useGSAP(() => {
     const clipAnimation = gsap.timeline({
@@ -19,6 +16,7 @@ const Pin = () => {
         scrub: 1,
         pin: true,
         pinSpacing: true,
+        toggleActions: "play none none reverse",
       },
     });
     clipAnimation.to("#pin-1", {
