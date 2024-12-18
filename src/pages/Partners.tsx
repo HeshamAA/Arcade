@@ -9,18 +9,24 @@ const Partners = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: "#partners-control",
-        start: "top center ",
-        end: "bottom center",
-        pin: "#pinned-text-partners",
-        pinSpacing: true,
-        scrub: 1,
-        
+    ScrollTrigger.matchMedia({
+      // Media query for min-height: 768px
+      "(min-height: 768px)": function () {
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: "#partners-control",
+            start: "top center",
+            end: "bottom center",
+            pin: "#pinned-text-partners",
+            pinSpacing: true,
+            scrub: 1,
+          },
+        });
       },
     });
   });
+  
+  
   const partners = [
     "Binance labs",
     "Coinbase Ventures",

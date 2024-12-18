@@ -8,16 +8,7 @@ import { useRef } from "react";
 const Pin = () => {
   const pinRef = useRef(null);
 
-  // const Intersection = useIntersection(pinRef, {
-  //   root: null,
-  //   rootMargin: "0px",
-  //   threshold: 0.6,
-  // });
-  // useEffect(() => {
-  //   if (Intersection?.isIntersecting) {
-  //     setClassName("bg-yellow");
-  //   }
-  // }, [Intersection?.isIntersecting]);
+ 
 
   useGSAP(() => {
     const clipAnimation = gsap.timeline({
@@ -39,6 +30,9 @@ const Pin = () => {
     clipAnimation.to("#scroller-1", {
       height: "100%",
     });
+    clipAnimation.to(".pin-1-parent", {
+      display: "none",
+    });
     clipAnimation.to("#pin-2", {
       opacity: 1,
     });
@@ -47,6 +41,9 @@ const Pin = () => {
     });
     clipAnimation.to("#scroller-2", {
       height: "100%",
+    });
+    clipAnimation.to(".pin-2-parent", {
+      display: "none",
     });
     clipAnimation.to("#pin-3", {
       opacity: 1,

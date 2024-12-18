@@ -52,7 +52,7 @@ const Story = () => {
           className="z-[2] select-none mix-blend-difference"
         ></AnimatedTitle>
         <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5}>
-          <div className="h-[600px] perspective w-[500px]  ">
+          <div className=" perspective h-[600px] w-[200px] sm:h[400px] sm:w-[500px]  ">
             <img
               src="img/entrance.webp"
               className="story-photo md:max-w-[100%] w-full rounded cursor-pointer"

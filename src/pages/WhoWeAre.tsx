@@ -9,24 +9,12 @@ const WhoWeAre = () => {
   gsap.registerPlugin(ScrollTrigger);
   const whoRef = useRef(null);
 
-  // const Intersection = useIntersection(whoRef, {
-  //   root: null,
-  //   rootMargin: "0px",
-  //   threshold: 0.2,
-  // });
-  // useEffect(() => {
-  //   if (Intersection?.isIntersecting) {
-  //     setClassName("bg-gray");
-  //   } else {
-  //     setClassName("bg-black-white");
-  //   }
-  // }, [Intersection?.isIntersecting]);
+
 
   useGSAP(() => {
     gsap.to("#whoText", {
       transform: "translate3d(0, 0, 0) rotateY(0deg) rotateX(0deg)",
       opacity: 1,
-      // ease: "power2.inOut",
       scrollTrigger: {
         trigger: "#who",
         start: "top center",
@@ -35,6 +23,8 @@ const WhoWeAre = () => {
       },
     });
   });
+  
+
 
   return (
     <section
