@@ -10,20 +10,6 @@ const Story = () => {
   gsap.registerPlugin(ScrollTrigger);
   const storyRef = useRef(null);
 
-  // const Intersection = useIntersection(storyRef, {
-  //   root: null,
-  //   rootMargin: "0px",
-  //   threshold: 0.2,
-  // });
-
-  // useEffect(() => {
-  //   if (Intersection?.isIntersecting) {
-  //     setClassName("bg-black-white");
-  //   } else {
-  //     setClassName("bg-yellow");
-  //   }
-
-  // }, [Intersection?.isIntersecting]);
 
   useGSAP(() => {
     gsap.to(".story-photo", {

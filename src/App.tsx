@@ -3,7 +3,7 @@ import Features from "./pages/Features";
 import Hero from "./pages/Hero";
 import Navbar from "./pages/Navbar";
 import Partners from "./pages/Partners";
-// import Pin from "./pages/Pin";
+
 import Story from "./pages/Story";
 import WhoWeAre from "./pages/WhoWeAre";
 import gsap from "gsap";
@@ -13,6 +13,7 @@ import { useGSAP } from "@gsap/react";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Loader from "./components/Loader";
+import Pin from "./pages/Pin";
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -102,7 +103,7 @@ function App() {
         <About></About>
         <Features></Features>
         <Story></Story>
-        {/* <Pin></Pin> */}
+        <Pin></Pin>
         <WhoWeAre></WhoWeAre>
         <Partners></Partners>
         <Contact></Contact>
