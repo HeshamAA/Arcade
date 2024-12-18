@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  will-change: transform, opacity;
+}
 body {
   width: 100dvw;
   overflow-x: hidden;
