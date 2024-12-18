@@ -85,8 +85,8 @@ function App() {
   useGSAP(() => {
     gsap.to("#loader-path", {
       width: "0%",
-      delay: 6,
-      duration: 4,
+      delay: 3,
+      duration: 6,
       ease: "power2.inOut",
       onComplete: () => {
         document.getElementById("loader-path")?.remove();
