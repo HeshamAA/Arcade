@@ -16,72 +16,43 @@ import Loader from "./components/Loader";
 import Pin from "./pages/Pin";
 
 function App() {
+  const yellow = "#edff66";
+  const black = "#010101";
+
   gsap.registerPlugin(ScrollTrigger);
-  // useGSAP(() => {
-  //   const tl = gsap.timeline({});
+  useGSAP(() => {
+    const tl = gsap.timeline({});
 
-  //   tl.to("#story-section", {
-  //     backgroundColor: "#edff66",
-  //     color: "#010101",
-  //     scrollTrigger: {
-  //       trigger: "#pinClip",
-  //       start: "top bottom",
-  //       end: "bottom top",
-  //       toggleActions: "play none none reverse",
-  //     },
-  //   });
-  //   tl.to("#pinClip", {
-  //     backgroundColor: "#edff66",
-  //     color: "#010101",
-  //     scrollTrigger: {
-  //       trigger: "#pinClip",
-  //       start: "top center",
-  //       end: "bottom bottom",
-  //       toggleActions: "play none none reverse",
-  //     },
-  //   });
+    tl.to("#story-section", {
+      backgroundColor: yellow,
+      color: black,
+      scrollTrigger: {
+        trigger: "#story-section",
+        start: "bottom bottom",
+        toggleActions: "play none none reverse",
+      },
+    });
+ 
+    tl.to("#pinClip", {
+      backgroundColor: "#dfdff2d9",
+      color: "#010101",
+      scrollTrigger: {
+        trigger: "#who",
+        start: "top bottom",
+        toggleActions: "play none none reverse",
+      },
+    });
+    tl.to("#who", {
+      backgroundColor: "#010101",
+      color: "#F0F2FA",
+      scrollTrigger: {
+        trigger: "#partners-section",
+        start: "top bottom",
+        toggleActions: "play none none reverse",
+      },
+    });
 
-  //   tl.to("#pinClip", {
-  //     backgroundColor: "#dfdff2 ",
-  //     color: "#010101",
-  //     scrollTrigger: {
-  //       trigger: "#who",
-  //       start: "top bottom",
-  //       end: "bottom top",
-  //       toggleActions: "play none none reverse",
-  //     },
-  //   });
-  //   tl.to("#who", {
-  //     backgroundColor: "#dfdff2 ",
-  //     color: "#010101",
-  //     scrollTrigger: {
-  //       trigger: "#who",
-  //       start: "top center",
-  //       end: "bottom top",
-  //       toggleActions: "play none none reverse",
-  //     },
-  //   });
-  //   tl.to("#partners-section", {
-  //     backgroundColor: "#010101",
-  //     color: "#dfdff2",
-  //     scrollTrigger: {
-  //       trigger: "#partners-section",
-  //       start: "top center",
-  //       end: "bottom top",
-  //       toggleActions: "play none none reverse",
-  //     },
-  //   });
-  //   tl.to("#who", {
-  //     backgroundColor: "#010101",
-  //     color: "#dfdff2",
-  //     scrollTrigger: {
-  //       trigger: "#partners-section",
-  //       start: "top center",
-  //       end: "bottom top",
-  //       toggleActions: "play none none reverse",
-  //     },
-  //   });
-  // });
+  });
 
   useGSAP(() => {
     gsap.to("#loader-path", {

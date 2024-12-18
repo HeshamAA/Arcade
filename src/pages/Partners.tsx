@@ -70,7 +70,7 @@ const Partners = () => {
   return (
     <section
       ref={partnersRef}
-      className={`min-h-screen w-screen p-20 bg-blue-75`}
+      className={`min-h-screen w-screen p-20 bg-blue-200 text-blue-100  `}
       id="partners-section"
     >
       <div
