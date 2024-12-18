@@ -3,7 +3,7 @@ import Tilt from "react-parallax-tilt";
 import FooterBtn from "../components/FooterBtn";
 const Footer = () => {
   return (
-    <section className="min-h-screen w-screen bg-violet-300 py-5">
+    <section className="min-h-screen w-screen bg-violet-300 py-5 overflow-hidden">
       <div>
         <Tilt
           tiltMaxAngleY={40}

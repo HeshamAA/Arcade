@@ -10,18 +10,11 @@ const Story = () => {
   gsap.registerPlugin(ScrollTrigger);
   const storyRef = useRef(null);
 
-
   useGSAP(() => {
     gsap.to(".story-photo", {
-      
+      transform: "translate3d(0, -50px, 0) rotateY(40deg) rotateX(20deg)",
       opacity: 1,
       duration: 0.5,
-      scrollTrigger: {
-        trigger: ".story-photo",
-        start: "top bottom",
-        end: "bottom center",
-        toggleActions: "play none none reverse",
-      },
     });
   });
 

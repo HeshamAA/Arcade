@@ -5,29 +5,37 @@ import { useRef } from "react";
 
 const Partners = () => {
   const partnersRef = useRef(null);
+  const parentRef = useRef(null);
+  const pinnedTextRef = useRef(null);
+
 
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
-    ScrollTrigger.matchMedia({
-      // Media query for min-height: 768px
-      "(min-height: 768px)": function () {
-        
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: "#partners-control",
-            start: "top center",
-            end: "bottom center",
-            pin: "#pinned-text-partners",
-            pinSpacing: true,
-            scrub: 1,
-          },
-        });
-      },
+   
+    console.log(parentRef.current);
+    
+   
+    const mm = gsap.matchMedia();
+
+    
+    mm.add("(min-width: 768px)", () => {
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: parentRef.current,
+          start: "top center",
+          end: "bottom center",
+          pin: pinnedTextRef.current,
+          pinSpacing: true,
+          scrub: 1,
+        },
+      });
     });
+
+    
+    return () => mm.revert(); 
   });
-  
-  
+
   const partners = [
     "Binance labs",
     "Coinbase Ventures",
@@ -68,8 +76,13 @@ const Partners = () => {
       <div
         className="flex items-start flex-col md:flex-row justify-center relative "
         id="partners-control"
+        ref={parentRef}
       >
-        <div className="font-bold   relative max-w-[40%]" id="pinned-text-partners">
+        <div
+          className="font-bold   relative max-w-[40%]"
+          id="pinned-text-partners"
+          ref={pinnedTextRef}
+        >
           Our backers include top-tier VCs,funds,and companies,providing
           expertise,network and resources to fuel our project's sucess
         </div>
