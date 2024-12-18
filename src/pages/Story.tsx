@@ -43,7 +43,7 @@ const Story = () => {
     <section
       ref={storyRef}
       id="story-section"
-      className={`min-h-screen w-screen p-20 sm:p-28 md:p-40 bg-blue-200 text-blue-75  `}
+      className={`min-h-screen w-screen p-36 sm:p-28 md:p-40 bg-blue-200 text-blue-75  `}
     >
       <div className="flex items-center justify-center flex-col text-center text-blue-75 w-full  ">
         <div>THE OPEN IP UNIVERSE</div>
@@ -52,7 +52,7 @@ const Story = () => {
           className="z-[2] select-none mix-blend-difference"
         ></AnimatedTitle>
         <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5}>
-          <div className=" perspective h-[600px] w-[200px] sm:h[400px] sm:w-[500px]  ">
+          <div className=" perspective h-[400px] w-[200px] sm:h[400px] sm:w-[500px]  ">
             <img
               src="img/entrance.webp"
               className="story-photo md:max-w-[100%] w-full rounded cursor-pointer"
