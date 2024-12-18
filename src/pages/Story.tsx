@@ -43,7 +43,7 @@ const Story = () => {
     <section
       ref={storyRef}
       id="story-section"
-      className={`min-h-screen w-screen p-36 sm:p-28 md:p-40 bg-blue-200 text-blue-75  `}
+      className={`min-h-screen w-screen p-36 sm:p-28 md:p-40 bg-blue-200 text-blue-75 relative  `}
     >
       <div className="flex items-center justify-center flex-col text-center text-blue-75 w-full  ">
         <div>THE OPEN IP UNIVERSE</div>
