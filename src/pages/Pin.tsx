@@ -49,7 +49,7 @@ const Pin = () => {
       <div className="flex flex-col items-start justify-between" ref={pinRef}>
         <AnimatedTitle
           text="the universe
-            powered by ZENT"
+            powered by ARC"
           className="max-w-[500px] mt-10"
         />
         <div className="flex flex-col items-start gap-7">

@@ -11,7 +11,7 @@ const Footer = () => {
           perspective={1000}
           transitionSpeed={800}
         >
-          <div className="w-full font-zentry footer-heading text-center">
+          <div className="w-full font-zentry footer-heading text-center select-none">
             Arcade
           </div>
         </Tilt>
